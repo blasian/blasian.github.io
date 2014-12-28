@@ -162,7 +162,7 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 70%;
     background: url(../img/roofpic.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -174,9 +174,23 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=48,-117.7&zoom=6&scale=2&size=640x350&maptype=roadmap&sensor=false&format=png&visual_refresh=true&style=feature:all%7Celement:labels%7Cvisibility:off&style=feature:landscape.natural.terrain%7Cvisibility:off&style=feature:administrative%7Celement:geometry.stroke%7Cvisibility:off);
+}
+
+#trans-box {
+    color: black;
+    background-color: rgba(169,169,169,0.4);
 }
 
 /* Services */
+
+.interest-link {
+    color: white;
+}
+
+.interest-link:hover {
+    text-decoration: none;
+}
 
 .services {
     padding: 50px 0;
