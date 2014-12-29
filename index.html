@@ -10,6 +10,12 @@
     <meta name="author" content="Michael Spearman">
 
     <title>Michael Spearman - Online Portfolio</title>
+    <!-- SoundCloud API -->
+    <script src="//connect.soundcloud.com/sdk.js"></script>
+
+    <!-- SoundMap.js -->
+    <script src="js/soundmap.js"></script>
+
     <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
@@ -23,6 +29,17 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- video.js -->
+    <script type="text/javascript">
+  		document.createElement('video');document.createElement('audio');document.createElement('track');
+	</script>
+	<link href="//vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
+	<style type="text/css">
+		.vjs-fullscreen-control { display: none; } 
+		.vjs-volume-control { display: none; }
+	</style>
+	<script src="//vjs.zencdn.net/4.11/video.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +49,7 @@
 
 </head>
 
-<body >
+<body onload="initialize()">
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -208,31 +225,29 @@
                     <h2 style="color: white;">Side Projects</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
+                                   <img src="img/flashcardSB.png" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="portfolio-item">
+                            	<input type="button" class="btn btn-dark" value="Latest Upload" onclick="locate()">
+                                <div id="map-canvas" style="width: 100%; height: 400px;"></div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
+                                <video class="video-js vjs-default-skin" data-setup='{"width":186, "height":333, "controls":true, "autoplay":false,"loop":true, "children": { "controlBar": { "children": { "muteToggle":false } } } }'>
+                                <source src="file:///Users/michaelspearman/Code/blasian.github.io/img/simonsaysdemo.webm" type='video/webm'>
+							    <!-- <source src="http://webmup.com/E8el1/vid.webm" type='video/webm'> -->
+							  </video>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
                                 </a>
                             </div>
                         </div>
@@ -260,7 +275,7 @@
         </div>
     </aside>
 
-    <!-- Map -->
+    <!-- Map
     <section id="contact" class="map">
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         <br />
@@ -268,35 +283,35 @@
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
         </small>
         </iframe>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Contact Me</strong>
                     </h4>
-                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        <li><i class="fa fa-phone fa-fw"></i> CA - (778) 628-2343</li>
+                        <li><i class="fa fa-phone fa-fw"></i> US - (206) 288-3023</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:mikespearman.e@gmail.com">mikespearman.e@gmail.com</a>
                         </li>
                     </ul>
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <a href="https://www.facebook.com/MikeSpearmanE"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            <a href="http://www.github.com/blasian"><i class="fa fa-github fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            <a href="https://ca.linkedin.com/in/michaelspearman"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; Michael Spearman 2014</p>
                 </div>
             </div>
         </div>
