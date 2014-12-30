@@ -80,7 +80,6 @@
                 SC.get("/users/" + tracks[i].user_id, function(user){
                     if (user.country && (user.country != locations[locations.length - 1])) {
                         locations.push(user.country);
-                        console.log(user.country);
                     }
                 });
             }
@@ -110,6 +109,7 @@
                         content: country
                 });
                 google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.content = country;
                     infowindow.open(map, marker);
                 });
                 map.setCenter(results[0].geometry.location);
