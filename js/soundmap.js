@@ -3,6 +3,7 @@
     var geocoder;
     var locations = [];
     var offset = 10;
+    var prev;
 
     SC.initialize({
     	client_id: "64a4fa9fc8c9797be3c6dc27067c131c",
@@ -12,7 +13,7 @@
         geocoder = new google.maps.Geocoder();
         var mapOptions = {
             center: { lat: 0, lng: 0},
-            zoom: 3,
+            zoom: 1,
             disableDefaultUI: true, 
             zoomControl: false,
             scaleControl: false,
@@ -68,17 +69,16 @@
         map.setOptions({styles: styles});
 
         // Populating locations array
-        findLocations();
+        // findLocations();
     }
 
     // Create locations array
     function findLocations() {
         SC.get("/tracks", { limit: 10, offset: offset }, function(tracks){
-            console.log(tracks.length);
             offset += 10;
             for (var i = 0; i < tracks.length; i++) {
                 SC.get("/users/" + tracks[i].user_id, function(user){
-                    if (user.country) { 
+                    if (user.country && (user.country != locations[locations.length - 1])) {
                         locations.push(user.country);
                         console.log(user.country);
                     }
@@ -106,13 +106,14 @@
                     map: map,
                     position: results[0].geometry.location,
                 });
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow = new google.maps.InfoWindow({
+                infowindow = new google.maps.InfoWindow({
                         content: country
-                    });
+                });
+                google.maps.event.addListener(marker, 'click', function() {
                     infowindow.open(map, marker);
                 });
                 map.setCenter(results[0].geometry.location);
+                map.setZoom(3);
             }
     	});
     }

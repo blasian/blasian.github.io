@@ -174,7 +174,7 @@ hr.small {
 
 .about {
     padding: 50px 0;
-    background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=48,-117.7&zoom=6&scale=2&size=640x350&maptype=roadmap&sensor=false&format=png&visual_refresh=true&style=feature:all%7Celement:labels%7Cvisibility:off&style=feature:landscape.natural.terrain%7Cvisibility:off&style=feature:administrative%7Celement:geometry.stroke%7Cvisibility:off);
+    background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=45,-102&zoom=4&scale=2&size=640x350&maptype=terrainmap&sensor=false&format=png&visual_refresh=true&style=feature:all%7Celement:labels%7Cvisibility:off&style=feature:road%7Celement:all%7Cvisibility:off&style=feature:landscape.natural.terrain%7Cvisibility:off&style=feature:administrative%7Celement:geometry.stroke%7Cvisibility:off);
 }
 
 #trans-box {
