@@ -182,15 +182,48 @@ hr.small {
 
 /* About */
 
-.about {
-    padding: 50px 0;
-    background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=45.9,-114.1&zoom=5&scale=2&size=640x350&maptype=terrainmap&sensor=false&format=png&visual_refresh=true&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:administrative.province%7Celement:labels.text%7Cvisibility:off&style=feature:road%7Celement:all%7Cvisibility:off&style=feature:landscape.natural.terrain%7Cvisibility:off&style=feature:administrative%7Celement:geometry.stroke%7Cvisibility:off);
+#container-about {
+    height: 550px;
+}
 
+.black {
+    border-color: black;
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    display: table-row;
+}
+
+.filler {
+    width: 30%;
+}
+
+.cell {
+    display: table-cell;
+    white-space: nowrap;
+}
+
+.about {
+    margin-top: -570px;
+    padding: 30px;
+    position: relative;
+}
+
+#map {
+    height: 100%;
 }
 
 #trans-box {
+    position: absolute;
+    margin-left: 25%;
+    /* margin-left: 500px; */
     color: black;
     background-color: rgba(169,169,169,0.6);
+    padding: 15px;
+    z-index: 100;
+    display: table;
 }
 
 /* Services */

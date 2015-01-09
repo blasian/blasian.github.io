@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +12,17 @@
     <!-- SoundCloud API -->
     <script src="//connect.soundcloud.com/sdk.js"></script>
 
-    <!-- SoundMap.js -->
-    <script src="js/soundmap.js"></script>
-
-    <!-- Google Maps API -->
+    <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="./js/soundmap.js"></script>
+    <script src="./js/map.js"></script>
+
+    <script>
+        function init() {
+            displayMap();
+            initialize();
+        };
+    </script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,8 +54,7 @@
 
 </head>
 
-<body onload="initialize()">
-
+<body onload="init()">
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -87,66 +91,68 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h1>About</h1>
-                    <hr class="small">
-                </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6"></div>
-                <div class="col-md-8 col-sm-6" id="trans-box">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2> Home Base: </h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h3> Seattle, WA </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2> Current City: </h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h3> Vancouver, BC </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2> Education: </h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h3> University of British Columbia </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2> Major: </h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h3> Computer Science </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h2> Employment: </h2>
-                        </div>
-                        <div class="col-md-6">
-                            <h3> Seeking Internship </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h2> Here's my <a href="img/CPSC_Resume.pdf" download="Michael-Spearman-Resume">resume</a>!</h2>
-                        </div>
-                    </div> 
-                </div>
+    <div id="container-about" > 
+        <div id="map"></div>
+        <div class="about">
+            <div class="text-center">
+                <h1>About</h1>
+                <hr class="small black">
             </div>
-            <!-- /.row -->
+            <div id="trans-box">
+                <div class="line">
+                    <div class="cell">
+                        <h2> Home Base: </h2>
+                    </div>
+                    <div class="cell filler"></div>
+                    <div class="cell">
+                        <h3> Seattle, WA </h3>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="cell">
+                        <h2> Current City: </h2>
+                    </div>
+                    <div class="cell filler"></div>
+                    <div class="cell">
+                        <h3> Vancouver, BC </h3>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="cell">
+                        <h2> Education: </h2>
+                    </div>
+                    <div class="cell filler"></div>
+                    <div class="cell">
+                        <h3> University of British Columbia </h3>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="cell">
+                        <h2> Major: </h2>
+                    </div>
+                    <div class="cell filler"></div>
+                    <div class="cell">
+                        <h3> Computer Science </h3>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="cell">
+                        <h2> Employment: </h2>
+                    </div>
+                    <div class="cell filler"></div>
+                    <div class="cell">
+                        <h3> Seeking Internship </h3>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="cell">
+                        <h2> Here's my <a href="img/CPSC_Resume.pdf" download="Michael-Spearman-Resume">resume</a>!</h2>
+                    </div>
+                </div> 
+            </div>
+            <!-- /.container -->
         </div>
-        <!-- /.container -->
-    </section>
+    </div>
 
     <!-- Interests -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -240,7 +246,7 @@
                                 <div id="map-canvas" style="width: 100%; height: 400px;"></div>
                                 <div class=portfolio-text-container>
 	                                <p class=portfolio-text>
-	                                	<input type="button" class="btn btn-dark" value="Latest Upload" onclick="locate()"> <br>
+	                                	<input type="button" id="markButton" class="btn btn-dark" value="Latest Upload" onclick="locate()"> <br>
 	                                	<strong>SoundMap</strong>: This script uses SoundCloud's API to retrieve a list of the most recent SoundCloud uploads containing location data. This data is then geocoded and a marked on a map using the Google Maps API. <br>
 	                                	<strong>Language: </strong> JavaScript / SoundCloud API / Google Maps API <br>
 	                                </p>
