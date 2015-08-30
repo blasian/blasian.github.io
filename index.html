@@ -9,41 +9,17 @@
     <meta name="author" content="Michael Spearman">
 
     <title>Michael Spearman - Online Portfolio</title>
-    <!-- SoundCloud API -->
-    <script src="//connect.soundcloud.com/sdk.js"></script>
-
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script src="./js/soundmap.js"></script>
-    <script src="./js/map.js"></script>
-
-    <script>
-        function init() {
-            displayMap();
-            initialize();
-        };
-    </script>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/cv.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- video.js -->
-    <script type="text/javascript">
-  		document.createElement('video');document.createElement('audio');document.createElement('track');
-	</script>
-	<link href="//vjs.zencdn.net/4.11/video-js.css" rel="stylesheet">
-	<style type="text/css">
-		.vjs-fullscreen-control { display: none; } 
-		.vjs-volume-control { display: none; }
-	</style>
-	<script src="//vjs.zencdn.net/4.11/video.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,103 +30,82 @@
 
 </head>
 
-<body onload="init()">
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <!-- <li class="sidebar-brand">
-                <a href="#top">Home</a> 
-            </li> -->
-            <li>
-                <a href="#top">Top</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#services">Services</a>
-            </li>
-            <li>
-                <a href="#portfolio">Side Projects</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+<body>
+
+    <div class="navigation text-center">
+        <ul class="nav nav-justified">
+            <li role="presentation" id="cvButton"><a href="#">CV</a></li>
+            <li role="presentation" id="topButton"><a href="#">Michael Spearman</a></li>
+            <li role="presentation" id="contactButton"><a href="#">Contact</a></li>
         </ul>
-    </nav>
+    </div>
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-header-cover">
-            <h1>Michael Spearman</h1>
-            <h3>Online Portfolio</h3>
-            <br>
-        </div>
+        <div id="map"></div>
     </header>
 
     <!-- About -->
-    <div id="container-about" > 
-        <div id="map"></div>
+    <div id="about" > 
         <div class="about">
-            <div class="text-center">
-                <h1>About</h1>
-                <hr class="small black">
+            <div class="container">
+                <div class="col-md-8 col-md-offset-2" id="trans-box">
+                    <div class="line">
+                        <div class="cell">
+                            <h2> ID: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> Michael Spearman </h3>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="cell">
+                            <h2> Home Base: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> Seattle, WA </h3>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="cell">
+                            <h2> Current City: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> Vancouver, BC </h3>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="cell">
+                            <h2> Education: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> University of British Columbia </h3>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="cell">
+                            <h2> Major: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> Computer Science </h3>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="cell">
+                            <h2> Interests: </h2>
+                        </div>
+                        <div class="cell filler"></div>
+                        <div class="cell">
+                            <h3> Web + Mobile Dev </h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="trans-box">
-                <div class="line">
-                    <div class="cell">
-                        <h2> Home Base: </h2>
-                    </div>
-                    <div class="cell filler"></div>
-                    <div class="cell">
-                        <h3> Seattle, WA </h3>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="cell">
-                        <h2> Current City: </h2>
-                    </div>
-                    <div class="cell filler"></div>
-                    <div class="cell">
-                        <h3> Vancouver, BC </h3>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="cell">
-                        <h2> Education: </h2>
-                    </div>
-                    <div class="cell filler"></div>
-                    <div class="cell">
-                        <h3> University of British Columbia </h3>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="cell">
-                        <h2> Major: </h2>
-                    </div>
-                    <div class="cell filler"></div>
-                    <div class="cell">
-                        <h3> Computer Science </h3>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="cell">
-                        <h2> Employment: </h2>
-                    </div>
-                    <div class="cell filler"></div>
-                    <div class="cell">
-                        <h3> Seeking Internship </h3>
-                    </div>
-                </div>
-                <div class="line">
-                    <div class="cell">
-                        <h2> Here's my <a href="img/CPSC_Resume.pdf" download="Michael-Spearman-Resume">resume</a>!</h2>
-                    </div>
-                </div> 
-            </div>
-            <!-- /.container -->
         </div>
     </div>
 
@@ -160,117 +115,146 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Interests</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-code fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <a class="interest-link" href="http://www.github.com/blasian">
-                                        <strong>Programming</strong>
-                                    </a>
-                                </h4>
-                                <a href="http://www.github.com/blasian" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-camera fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <a class="interest-link" href="https://www.flickr.com/photos/blasian2012/">
-                                        <strong>Photography</strong>
-                                    </a>
-                                </h4>
-                                <a href="https://www.flickr.com/photos/blasian2012/" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-music fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <a class="interest-link" href="https://soundcloud.com/blzn">
-                                        <strong>Music</strong>
-                                    </a>
-                                </h4>
-                                <a href="https://soundcloud.com/blzn" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+                    <h2>Curricula Vitae</h2>
 
-    <!-- Callout
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside> -->
+                    <section class="cv education">
+                        <div class="container">
+                            <div class="divider">
+                                <p>Education</p>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <p>University of British Columbia</p>
+                                    <p class="details">BA Computer Science (Anticipated), 3.5 GPA</p>
+                                    <p class="details"><span class="bold">Coursework</span>: Algorithms and data structures, human-computer interaction, web development, relational databases, network computing.
+                                    <p class="details"><span class="bold">Languages</span>: Proficient in JavaScript, Objective-C, and Ruby. Familiar with Java, C/C++ and SQL.
+                                    <p class="details"><span class="bold">Frameworks</span>: Git, Rails, Backbone.js, Xcode, Eclipse, Bootstrap, jQuery.
+                                </div>
+                                <div class="year">
+                                    <p>2017</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="cv work">
+                        <div class="container">
+                            <div class="divider">
+                                <p>Work</p>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <a href="https://www.prizmmedia.com/">Prizm Media</a>
+                                    <p class="italic details">iOS Intern</p>
+                                    <p class="details">Objective-C, Xcode.</p>
+                                </div>
+                                <div class="location">
+                                    <p>Vancouver, BC</p>
+                                </div>
+                                <div class="year">
+                                    <p>Current Employed</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <a href="http://www.bcchildrens.ca/">BC Children's Hospital</a>
+                                    <p class="italic details">Web/Mobile Developer Intern, Summer 2015</p>
+                                    <p class="details">Objective-C, JavaScript, Backbone.js, Python, PHP.</p>
+                                </div>
+                                <div class="location">
+                                    <p>Vancouver, BC</p>
+                                </div>
+                                <div class="year">
+                                    <p>Summer 2015</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <a href="http://www.portagebaycafe.com/">Portage Bay Cafe</a>
+                                    <p class="italic details">Busser + Food Expediter</p>
+                                    <p class="details">"Eat like you give a damn."</p>
+                                </div>
+                                <div class="location">
+                                    <p>Seattle, WA</p>
+                                </div>
+                                <div class="year">
+                                    <p>Summer 2013-2015</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2 style="color: white;">Side Projects</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="portfolio-item">
-                                <img src="img/flashcardSB.png" style="width: 100%;">
-                                <div class=portfolio-text-container>
-	                                <p class=portfolio-text>
-	                                	<strong>FlashCard</strong>: an iOS app  that lets me study wherever I am, whenever I want. New  cards are shown by swiping to the left or selecting "correct" or "incorrect". Cards are flipped by tapping once on the card's text. The cards are separated into piles based on correctness in order to quickly identify which cards need to be studied. <br>
-	                                	<strong>Language: </strong> Objective-C / Xcode <br>
-	                                </p>
-	                            </div>
+                    <section class="cv projects">
+                        <div class="container">
+                            <div class="divider">
+                                <p>Personal Projects</p>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <a href="http://textbookr-beta.herokuapp.com/">TextBookr</a>
+                                    <p class="italic details">Ruby on Rails, JavaScript, PostgreSQL, Heroku</p>
+                                    <p class="details">Helping to connect students that need to buy or sell their textbooks.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="name">
+                                    <p><a href="https://github.com/blasian/CO2GO">CO2GO</a></p>
+                                    <p class="italic details">iOS, Objective-C</p>
+                                    <p class="details">Hackathon project that calculates and tracks CO2 footprint from driving.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="portfolio-item">
-                                <div id="map-canvas" style="width: 100%; height: 400px;"></div>
-                                <div class=portfolio-text-container>
-	                                <p class=portfolio-text>
-	                                	<input type="button" id="markButton" class="btn btn-dark" value="Latest Upload" onclick="locate()"> <br>
-	                                	<strong>SoundMap</strong>: This script uses SoundCloud's API to retrieve a list of the most recent SoundCloud uploads containing location data. This data is then geocoded and a marked on a map using the Google Maps API. <br>
-	                                	<strong>Language: </strong> JavaScript / SoundCloud API / Google Maps API <br>
-	                                </p>
-	                            </div>
+                    </section>
+
+                    <section class="cv interests">
+                        <div class="divider">
+                            <p>Interests</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-code fa-stack-1x text-primary"></i>
+                                </span>
+                                    <h4>
+                                        <a class="interest-link" href="http://www.github.com/blasian">
+                                            <strong>Programming</strong>
+                                        </a>
+                                    </h4>
+                                    <a href="http://www.github.com/blasian" class="btn btn-light">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-camera fa-stack-1x text-primary"></i>
+                                </span>
+                                    <h4>
+                                        <a class="interest-link" href="https://www.flickr.com/photos/blasian2012/">
+                                            <strong>Photography</strong>
+                                        </a>
+                                    </h4>
+                                    <a href="https://www.flickr.com/photos/blasian2012/" class="btn btn-light">Flickr</a>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="service-item">
+                                    <span class="fa-stack fa-4x">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-music fa-stack-1x text-primary"></i>
+                                </span>
+                                    <h4>
+                                        <a class="interest-link" href="https://soundcloud.com/blzn">
+                                            <strong>Music</strong>
+                                        </a>
+                                    </h4>
+                                    <a href="https://soundcloud.com/blzn" class="btn btn-light">SoundCloud</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                            	<div class="video-container">
-                                	<video class="video-js vjs-default-skin" loop controls>
-							    	<source src="http://webmup.com/E8el1/vid.webm" type='video/webm'>
-							  		</video>
-							  	</div>
-							  	<div class=portfolio-text-container>
-							  		<p>
-                                		<strong>SimonSays</strong>: Recreated a memorization game that I played often as a kid. <br>
-                                		<strong>Language: </strong> Objective-C / Xcode <br>
-                                	</p>
-							  	</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="http://www.github.com/blasian" class="btn btn-dark">View More Items</a>
+                        <!-- /.row (nested) -->
+                    </section>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -315,39 +299,14 @@
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
+    <!-- Custom JS -->
+    <script src="js/navigation.js"></script>
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script src="./js/map.js"></script>
 
 </body>
 

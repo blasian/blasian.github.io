@@ -1,4 +1,4 @@
-function displayMap() {
+$(function () {
     var mapOptions = {
         center: { lat: 48.4, lng: -118.3},
         zoom: 7,
@@ -61,4 +61,4 @@ function displayMap() {
     // Creating map
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
     map.setOptions({styles: styles});
-}
+});
