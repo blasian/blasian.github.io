@@ -6,10 +6,6 @@
 /** Main styles
 --------------------------------------------- **/
 
-html {
-	font-size: 80%; 
-}
-
 section.cv {
 	margin-top: 20px;
 }
@@ -17,10 +13,6 @@ section.cv {
 .name a {
 	color: white;
 	text-decoration: underline;
-}
-
-html {
-	width: 100%;
 }
 
 .divider {
