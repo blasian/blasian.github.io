@@ -8,7 +8,7 @@ $("#cvButton").click(function(e) {
 $("#topButton").click(function(e) {
 	e.preventDefault();
     $('html, body').animate({
-        scrollTop: parseInt($("#top").offset().top)
+        scrollTop: parseInt($(".top").offset().top)
     }, 2000);
 });
 
