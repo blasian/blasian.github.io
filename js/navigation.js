@@ -1,20 +1,14 @@
 $("#cvButton").click(function(e) {
 	e.preventDefault();
-    $('html, body').animate({
-        scrollTop: parseInt($("#services").offset().top)
-    }, 2000);
+    window.location.hash = "services"
 });
 
 $("#topButton").click(function(e) {
 	e.preventDefault();
-    $('html, body').animate({
-        scrollTop: parseInt($(".top").offset().top)
-    }, 2000);
+    window.location.hash = "top"
 });
 
 $("#contactButton").click(function(e) {
 	e.preventDefault();
-    $('html, body').animate({
-        scrollTop: parseInt($("#contact").offset().top)
-    }, 2000);
+    window.location.hash = "contact"
 });
