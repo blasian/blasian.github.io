@@ -6,10 +6,6 @@
 /** Main styles
 --------------------------------------------- **/
 
-section.cv {
-	margin-top: 20px;
-}
-
 .name a {
 	color: white;
 	text-decoration: underline;
@@ -48,17 +44,14 @@ section.cv {
 	font-weight: 400;
 }
 
+.item .underline {
+	text-decoration: underline;
+}
+
 .item .location {
-	position: absolute;
-	top: 0;
-	right: 45%;
 	font-size: 0.8rem;
 }
 
 .item .year {
-	position: absolute;
-	top: 0;
-	right: 0;
 	font-size: 0.8rem;
-	vertical-align: middle;
 }

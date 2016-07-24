@@ -1,7 +1,7 @@
 $(function () {
     var mapOptions = {
-        center: { lat: 48.4, lng: -118.3},
-        zoom: 7,
+        center: { lat: 47.636557, lng: -122.319416},
+        zoom: 13,
         disableDefaultUI: true,
         zoomControl: false,
         scaleControl: false,
@@ -24,12 +24,6 @@ $(function () {
     },{
         featureType: "administrative.province",
         elementType: "labels.text",
-        stylers: [
-            { visibility: "off" }
-        ]
-    },{
-        featureType: "road",
-        elementType: "all",
         stylers: [
             { visibility: "off" }
         ]

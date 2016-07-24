@@ -1,6 +1,6 @@
 $("#cvButton").click(function(e) {
 	e.preventDefault();
-    window.location.hash = "services"
+    window.location.hash = "cv"
 });
 
 $("#topButton").click(function(e) {

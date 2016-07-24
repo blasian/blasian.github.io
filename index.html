@@ -25,7 +25,6 @@
 </head>
 
 <body>
-
     <div class="navigation text-center">
         <ul class="nav nav-justified">
             <li role="presentation" id="cvButton"><a href="#">CV</a></li>
@@ -34,242 +33,222 @@
         </ul>
     </div>
 
-    <!-- Header -->
-    <!-- <div id="top" class="header"> -->
-        <div id="map" class="top"></div>
-    <!-- </div> -->
-
-    <!-- About -->
-    <div id="about" > 
-        <div class="about">
-            <div class="container">
-                <div class="col-md-8 col-md-offset-2" id="trans-box">
-                    <div class="line">
-                        <div class="cell">
-                            <h2> ID: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> Michael Spearman </h3>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="cell">
-                            <h2> Home Base: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> Seattle, WA </h3>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="cell">
-                            <h2> Current City: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> Vancouver, BC </h3>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="cell">
-                            <h2> Education: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> University of British Columbia </h3>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="cell">
-                            <h2> Major: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> Computer Science </h3>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="cell">
-                            <h2> Interests: </h2>
-                        </div>
-                        <div class="cell filler"></div>
-                        <div class="cell">
-                            <h3> Web + Mobile Dev </h3>
-                        </div>
-                    </div>
+    <div id="header" class="row top">
+        <div id="about" class="col-lg-5 col-md-5 col-sm-5 col-xs-12"> 
+            <div class="line text-center">
+                <div class="cell">
+                    <h2> Name </h2>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <p> Michael Spearman </p>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <h2> Origin </h2>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <p> Seattle, WA </p>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <h2> Current </h2>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <p> Sunnyvale, CA </p>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <h2> Education </h2>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <p> University of British Columbia </p>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <h2> Major </h2>
+                </div>
+            </div>
+            <div class="line text-center">
+                <div class="cell">
+                    <p> Computer Science </p>
                 </div>
             </div>
         </div>
+
+        <div id="map" class="col-lg-7 col-md-7 col-sm-7 col-xs-12"></div>
     </div>
 
     <!-- Interests -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-12">
-                    <h2>Curricula Vitae</h2>
+    <section id="cv" class="cv bg-primary">
+        <div class="row text-center">
+            <h2 class="col-lg-12">Curricula Vitae</h2>
 
-                    <section class="cv education">
-                        <div class="container">
-                            <div class="divider">
-                                <p>Education</p>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <p>University of British Columbia</p>
-                                    <p class="details">BA Computer Science (Anticipated), 3.5 in-major GPA</p>
-                                    <p class="details"><span class="bold">Coursework</span>: Algorithms and data structures, human-computer interaction, web development, relational databases, network computing.
-                                    <p class="details"><span class="bold">Languages</span>: Proficient in Objective-C, JavaScript and Python. Familiar with Java, C/C++, Ruby and SQL.
-                                    <p class="details"><span class="bold">Frameworks</span>: Git, Rails, Backbone.js, Xcode, Eclipse, Bootstrap, jQuery.
-                                </div>
-                                <div class="year">
-                                    <p>2017</p>
-                                </div>
-                            </div>
+            <section class="cv education">
+                <div class="container">
+                    <div class="divider">
+                        <p>Education</p>
+                    </div>
+                    <div class="item">
+                        <div class="name col-lg-8 col-md-8 col-sm-8 col-xs-8 text-left">
+                            <p>University of British Columbia</p>
+                            <p class="details">BA Computer Science (Anticipated), 3.5 in-major GPA</p>
+                            <p class="details"><span class="bold underline">Favorite Courses</span>: human-computer interaction, web development, algorithms and data structures and network computing.
+                            <p class="details"><span class="bold underline">Languages</span>: proficient in Objective-C, JavaScript and Python. Familiar with Java, C/C++, Ruby and SQL.
+                            <p class="details"><span class="bold underline">Tools</span>: AngularJs, Rails, UNIX, Git, Xcode, Eclipse, Bootstrap, jQuery.
                         </div>
-                    </section>
-                    <section class="cv work">
-                        <div class="container">
-                            <div class="divider">
-                                <p>Work</p>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <a href="https://www.microsoft.com/">Microsoft</a>
-                                    <p class="italic details">Software Engineering Intern</p>
-                                    <p class="details"><a href="https://www.microsoft.com/en-ca/sites/vancouver-development-center/students.aspx">Foundry Program</a></p>
-                                </div>
-                                <div class="location">
-                                    <p>Vancouver, BC</p>
-                                </div>
-                                <div class="year">
-                                    <p>Spring 2016</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <a href="https://www.prizmmedia.com/">Prizm Media</a>
-                                    <p class="italic details">iOS Intern</p>
-                                    <p class="details">Objective-C, Xcode.</p>
-                                </div>
-                                <div class="location">
-                                    <p>Vancouver, BC</p>
-                                </div>
-                                <div class="year">
-                                    <p>Current Employed</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <a href="http://www.bcchildrens.ca/">BC Children's Hospital</a>
-                                    <p class="italic details">Web/Mobile Developer Intern</p>
-                                    <p class="details">Objective-C, JavaScript, Backbone.js, Python, PHP.</p>
-                                </div>
-                                <div class="location">
-                                    <p>Vancouver, BC</p>
-                                </div>
-                                <div class="year">
-                                    <p>Summer 2015</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <a href="http://www.portagebaycafe.com/">Portage Bay Cafe</a>
-                                    <p class="italic details">Busser + Food Expediter</p>
-                                    <p class="details">"Eat like you give a damn."</p>
-                                </div>
-                                <div class="location">
-                                    <p>Seattle, WA</p>
-                                </div>
-                                <div class="year">
-                                    <p>Summer 2013-2015</p>
-                                </div>
-                            </div>
+                        <div class="year col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <p>Spring 2017 (anticipated graduation) </p>
                         </div>
-                    </section>
-
-                    <section class="cv projects">
-                        <div class="container">
-                            <div class="divider">
-                                <p>Personal Projects</p>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <a href="http://textbookr-beta.herokuapp.com/">TextBookr</a>
-                                    <p class="italic details">Ruby on Rails, JavaScript, PostgreSQL, Heroku</p>
-                                    <p class="details">Helps connect students that need to buy and sell their textbooks.</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="name">
-                                    <p><a href="https://github.com/blasian/CO2GO">CO2GO</a></p>
-                                    <p class="italic details">iOS, Objective-C</p>
-                                    <p class="details">Hackathon project that calculates and tracks CO2 footprint from driving.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="cv interests">
-                        <div class="container">
-                            <div class="divider">
-                                <p>Interests</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="service-item">
-                                        <span class="fa-stack fa-4x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-code fa-stack-1x text-primary"></i>
-                                    </span>
-                                        <h4>
-                                            <a class="interest-link" href="http://www.github.com/blasian">
-                                                <strong>Programming</strong>
-                                            </a>
-                                        </h4>
-                                        <a href="http://www.github.com/blasian" class="btn btn-light">GitHub</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="service-item">
-                                        <span class="fa-stack fa-4x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-camera fa-stack-1x text-primary"></i>
-                                    </span>
-                                        <h4>
-                                            <a class="interest-link" href="https://www.flickr.com/photos/blasian2012/">
-                                                <strong>Photography</strong>
-                                            </a>
-                                        </h4>
-                                        <a href="https://www.flickr.com/photos/blasian2012/" class="btn btn-light">Flickr</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="service-item">
-                                        <span class="fa-stack fa-4x">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-music fa-stack-1x text-primary"></i>
-                                    </span>
-                                        <h4>
-                                            <a class="interest-link" href="https://soundcloud.com/blzn">
-                                                <strong>Music</strong>
-                                            </a>
-                                        </h4>
-                                        <a href="https://soundcloud.com/blzn" class="btn btn-light">SoundCloud</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /.row (nested) -->
-                    </section>
+                    </div>
                 </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
+            </section>
+            <section class="cv work">
+                <div class="container">
+                    <div class="divider">
+                        <p>Work</p>
+                    </div>
+                    <div class="item row">
+                        <div class="name col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+                            <a href="https://www.amazon.com/">Amazon.com</a>
+                            <p class="italic details">Software Engineering Intern</p>
+                            <p class="details"><a href="http://www.lab126.com/">Lab 126</a></p>
+                        </div>
+                        <div class="location col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p>Sunnyvale, CA</p>
+                        </div>
+                        <div class="year col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <p>Summer 2016</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+                            <a href="https://www.microsoft.com/">Microsoft</a>
+                            <p class="italic details">Software Engineering Intern</p>
+                            <p class="details"><a href="https://www.microsoft.com/en-ca/sites/vancouver-development-center/students.aspx">Foundry Program</a></p>
+                        </div>
+                        <div class="location col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p>Vancouver, BC</p>
+                        </div>
+                        <div class="year col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <p>Spring 2016</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+                            <a href="https://www.prizmmedia.com/">Prizm Media</a>
+                            <p class="italic details">iOS Intern</p>
+                            <p class="details">Objective-C, Xcode.</p>
+                        </div>
+                        <div class="location col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p>Vancouver, BC</p>
+                        </div>
+                        <div class="year col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <p>Fall 2015</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">
+                            <a href="http://www.portagebaycafe.com/">Portage Bay Cafe</a>
+                            <p class="italic details">Busser + Food Expediter</p>
+                            <p class="details">"Eat like you give a damn."</p>
+                        </div>
+                        <div class="location col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                            <p>Seattle, WA</p>
+                        </div>
+                        <div class="year col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                            <p>Summer 2013-2015</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cv projects">
+                <div class="container">
+                    <div class="divider">
+                        <p>Personal Projects</p>
+                    </div>
+                    <div class="item">
+                        <div class="name col-md-4 text-left">
+                            <a href="http://textbookr-beta.herokuapp.com/">TextBookr</a>
+                            <p class="italic details">Ruby on Rails, JavaScript, PostgreSQL, Heroku</p>
+                            <p class="details">Helps connect students that need to buy and sell their textbooks.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name col-md-4 text-left">
+                            <p><a href="https://github.com/blasian/CO2GO">CO2GO</a></p>
+                            <p class="italic details">iOS, Objective-C</p>
+                            <p class="details">Hackathon project that calculates and tracks CO2 footprint from driving.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cv interests">
+                <div class="container">
+                    <div class="divider">
+                        <p>Interests</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-code fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <a class="interest-link" href="http://www.github.com/blasian">
+                                        <strong>Programming</strong>
+                                    </a>
+                                </h4>
+                                <a href="http://www.github.com/blasian" class="btn btn-light">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-camera fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <a class="interest-link" href="https://www.flickr.com/photos/blasian2012/">
+                                        <strong>Photography</strong>
+                                    </a>
+                                </h4>
+                                <a href="https://www.flickr.com/photos/blasian2012/" class="btn btn-light">Flickr</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-music fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <a class="interest-link" href="https://soundcloud.com/blzn">
+                                        <strong>Music</strong>
+                                    </a>
+                                </h4>
+                                <a href="https://soundcloud.com/blzn" class="btn btn-light">SoundCloud</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </section>
         </div>
-        <!-- /.container -->
     </section>
 
     <!-- Footer -->
@@ -280,8 +259,7 @@
                     <h4><strong>Contact Me</strong>
                     </h4>
                     <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> CA - (778) 628-2343</li>
-                        <li><i class="fa fa-phone fa-fw"></i> US - (206) 288-3023</li>
+                        <li><i class="fa fa-phone fa-fw"></i>(206) 288-3023</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:mikespearman.e@gmail.com">mikespearman.e@gmail.com</a>
                         </li>
                     </ul>
