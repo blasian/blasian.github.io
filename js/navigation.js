@@ -5,7 +5,7 @@ $("#cvButton").click(function(e) {
 
 $("#topButton").click(function(e) {
 	e.preventDefault();
-    window.location.hash = "top"
+    window.location.hash = "header"
 });
 
 $("#contactButton").click(function(e) {
